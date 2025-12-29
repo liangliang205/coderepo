@@ -1,0 +1,228 @@
+$language-ali: '阿里巴巴普惠体', sans-serif;
+$language-Montserrat: 'Montserrat', sans-serif;
+$language-siyuan: '思源黑体', sans-serif;
+
+.snag-good-card {
+  width: 888px;
+  height: 390px;
+  border-radius: 16px;
+  background: rgba(248, 248, 249, 1);
+  margin: 20px auto;
+  display: flex;
+
+  // 图片样式
+  .ant-image {
+    margin: 14px 50px 74px 52px;
+    flex-shrink: 0;
+
+  }
+
+  // 右侧内容样式
+  .snag-good-card-main {
+    height: 390px;
+    width: 562px;
+
+    .info-btn {
+      width: 516px;
+      height: 160px;
+      margin-top: 52px;
+      display: flex;
+
+      .ant-card {
+        // 取消卡片的边框和背景色
+        border: none;
+        background: none;
+      }
+
+      .ant-card-body {
+        padding: 0;
+
+        // 待付款样式
+        .pending-pay {
+          .ant-card-meta-description {
+            width: 136px;
+            height: 22px;
+            font-size: 16px;
+            font-weight: 400;
+            letter-spacing: 0;
+            line-height: 22px;
+            color: rgba(143, 209, 0, 1);
+            font-family: $language-ali;
+          }
+        }
+
+        // 商品标题样式
+        .title {
+          .ant-card-meta-description {
+            margin-top: 10px;
+            width: 260px;
+            height: 64px;
+            font-size: 20px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 22px;
+            color: rgba(3, 3, 3, 1);
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            word-break: break-word;
+            font-family: $language-Montserrat;
+          }
+        }
+
+        // 卖家
+        .seller {
+          margin-top: 6px;
+
+          .ant-card-meta-description {
+            height: 20px;
+            font-size: 14px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 20px;
+            color: rgba(128, 128, 128, 1);
+            text-align: center;
+            text-align: left;
+            font-family: $language-ali;
+
+            span {
+              margin-right: 14px;
+            }
+          }
+        }
+
+        // 评分
+        .order-rating {
+          height: 20px;
+          margin-top: 18px;
+
+          .ant-card-meta-description {
+            font-size: 18px;
+            font-weight: 500;
+            letter-spacing: 0;
+            line-height: 16px;
+            color: rgba(166, 166, 166, 1);
+            font-family: $language-Montserrat;
+          }
+        }
+
+      }
+
+      // 按钮样式
+      .btn-wrapper {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-left: 56px;
+        font-family: $language-ali;
+
+        .resubmit-action {
+          width: 198px;
+          height: 45px;
+          border-radius: 32px;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22px;
+          margin-top: 12px;
+        }
+
+        .return-item {
+          background: none;
+          border: none;
+          box-shadow: none;
+          font-size: 16px;
+          font-weight: 400;
+          letter-spacing: 0;
+          line-height: 22px;
+          color: rgba(0, 0, 0, 1);
+          display: inline-flex;
+          align-items: center;
+          gap: 6px;
+
+          &:active {
+            color: rgba(0, 0, 0, 0.45);
+          }
+
+          .iconfont {
+            margin-top: 4px;
+          }
+        }
+
+        .show-rating {
+          width: 144px;
+          height: 45px;
+          border-radius: 32px;
+          background: rgba(255, 195, 0, 1);
+          margin-left: 26px;
+          color: rgba(255, 255, 255, 1);
+          font-size: 16px;
+          font-weight: 500;
+          letter-spacing: 0;
+          line-height: 22px;
+        }
+      }
+    }
+
+    // cash-back
+    .cash-back {
+      height: 20px;
+      margin-top: 16px;
+      font-family: $language-siyuan;
+      font-size: 16px;
+      font-weight: 400;
+      letter-spacing: 0;
+      line-height: 20px;
+
+      .wallet {
+        color: rgba(128, 128, 128, 1);
+        margin-left: 20px;
+      }
+    }
+
+    .steps {
+      width: 374px;
+      height: 90px;
+      margin-top: 24px;
+      margin-left: 75px;
+      font-family: $language-siyuan;
+      // background-color: skyblue;
+
+      // 步骤图标样式
+      .steps-wrapper {
+        height: 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        width: 100%;
+        gap: 0;
+
+        // 隐藏Progress的span元素
+        .ant-progress-body>.ant-progress-indicator-end {
+          display: none !important;
+        }
+      }
+
+      // 步骤文字样式
+      .steps-text {
+        margin-left: -18px;
+        width: 414px;
+        display: flex;
+        justify-content: space-between;
+
+        span {
+          width: 86px;
+          height: 40px;
+          font-size: 14px;
+          font-weight: 400;
+          letter-spacing: 0;
+          line-height: 20px;
+          color: rgba(0, 0, 0, 1);
+          text-align: center;
+          vertical-align: top;
+        }
+      }
+    }
+  }
+}
