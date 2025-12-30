@@ -1,0 +1,396 @@
+// 语言样式
+$language: 'Montserrat', sans-serif;
+
+.goods-detail {
+  left: 147px;
+  top: 126px;
+  width: 1184px;
+  height: 745px;
+  opacity: 1;
+  border-radius: 16px;
+  background: rgba(229, 229, 229, 0.4);
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px auto;
+  display: flex;
+  transition: height 0.3s ease;
+
+  // 侧边栏小图
+  .image-column {
+    width: 80px;
+    height: 376px;
+    margin-left: 25px;
+    margin-top: 56px;
+    margin-right: 25px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    overflow-y: auto;
+    overflow-x: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    align-items: center;
+
+    .image-column-item {
+      width: 70px;
+      cursor: pointer;
+      border: 0.5px solid rgba(0, 0, 0, 0.08);
+      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+      margin-top: 2px;
+      margin-bottom: 14px;
+
+      transition: all 0.3s ease;
+      flex-shrink: 0;
+
+      &.active {
+        width: 72px;
+        border: 2px solid rgba(0, 0, 0);
+        box-sizing: border-box;
+        transform: scale(1.05);
+      }
+    }
+  }
+
+  // 商品大图
+  .image-main {
+    width: 300px;
+    height: 408px;
+    opacity: 1;
+    margin-top: 36px;
+    margin-right: 46px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    position: relative;
+
+    .image-index-badge {
+      width: 26px;
+      height: 16px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      background: rgba(128, 128, 128, 1);
+      color: rgba(255, 255, 255, 1);
+      pointer-events: none;
+      opacity: 1;
+      // 文本
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0px;
+      line-height: 16px;
+      text-align: center;
+      vertical-align: center;
+    }
+  }
+
+  // 点击跳转下一张图
+  .next-img-btn {
+    width: 25px;
+    height: 25px;
+    margin-top: 210px;
+    opacity: 1;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 1);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // 不需要跳转时的占位类
+  .no-next-img-btn {
+    width: 25px;
+  }
+
+  // 商品详细信息
+  .detail-data {
+    width: 550px;
+    margin-left: 45px;
+    margin-top: 95px;
+    border: none;
+    background: none;
+
+    .ant-card-body {
+      width: 550px;
+      height: 44px;
+      padding: 0;
+      border-radius: 0%;
+
+      // 标题
+      .title {
+        .ant-card-meta-description {
+          width: 550px;
+          height: 44px;
+          font-family: $language;
+          color: rgba(3, 3, 3, 1);
+          font-size: 20px;
+          line-height: 21px;
+          font-weight: 500;
+          letter-spacing: 0px;
+          white-space: normal;
+          text-align: left;
+          vertical-align: top;
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 2; // 显示最多3行
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+
+      }
+
+      // 销售商
+      .seller {
+        height: 16px;
+        margin-top: 12px;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0px;
+        line-height: 16px;
+        color: rgba(0, 0, 0, 1);
+        font-family: $language;
+
+        .seller-name {
+          font-weight: 300;
+        }
+      }
+
+      // 评分
+      .grade .ant-card-meta-description ul {
+        margin-top: 6px;
+        height: 14px;
+      }
+    }
+
+    // 原价
+    .old-price {
+      height: 32px;
+      font-size: 26px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 32px;
+      text-decoration-line: line-through;
+      color: rgba(166, 166, 166, 1);
+      text-align: left;
+      margin-top: 16px;
+    }
+
+    // 现价
+    .new-price {
+      height: 44px;
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 44px;
+      color: rgba(157, 130, 32, 1);
+      text-align: left;
+      vertical-align: top;
+      position: relative;
+
+      .ant-card-meta-description {
+        color: rgba(157, 130, 32, 1);
+      }
+
+      span {
+        height: 14px;
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 14px;
+        color: rgba(0, 0, 0, 1);
+        text-align: left;
+        vertical-align: top;
+        margin-left: 6px;
+        position: absolute;
+        bottom: 8px;
+      }
+    }
+
+    // 登录提示
+    .tip {
+      height: 30px;
+      background: rgba(212, 48, 48, 0.9);
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 30px;
+      color: rgba(255, 255, 255, 1);
+      text-align: center;
+      margin-top: 42px;
+      font-family: $language;
+    }
+
+    // 标签样式
+    .label {
+      height: 25px;
+      margin-top: 28px;
+      font-size: 12px;
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 25px;
+      color: rgba(166, 166, 166, 1);
+      text-align: left;
+      font-family: $language;
+
+      .ant-card-meta-description {
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 14px;
+        text-align: left;
+        vertical-align: top;
+        display: flex;
+        flex-wrap: nowrap;
+        align-items: center;
+        gap: 16px;
+        width: 550px;
+      }
+
+      span {
+        display: flex;
+        align-items: center;
+        gap: 4px;
+        height: 25px;
+        white-space: nowrap;
+        flex-shrink: 0;
+      }
+
+      i {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        flex-shrink: 0;
+      }
+    }
+
+    // 按钮组
+    .button-group {
+      display: flex;
+      margin-top: 64px;
+      align-items: center;
+      font-family: $language;
+
+      // 登录按钮
+      .login-btn {
+        width: 450px;
+        height: 46px;
+        border-radius: 36px;
+        text-align: center;
+        font-size: 16px;
+        background: rgba(0, 0, 0, 1);
+        color: rgba(255, 255, 255, 1);
+
+        &:hover,
+        &:focus,
+        &:active {
+          background: rgba(0, 0, 0, 1) !important;
+          color: rgba(255, 255, 255, 1) !important;
+          border-color: transparent !important;
+        }
+      }
+
+      // 跳转amazon按钮
+      .skip {
+        width: 44px;
+        height: 44px;
+        margin-left: 20px;
+        border-radius: 50%;
+        background-image: url('https://img.js.design/assets/img/692305abbad414f8194b0d25.png#edefcc2fbd9a5fbeac8c586f09639759');
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        border: none;
+        cursor: pointer;
+
+        &:hover,
+        &:focus,
+        &:active {
+          background-image: url('https://img.js.design/assets/img/692305abbad414f8194b0d25.png#edefcc2fbd9a5fbeac8c586f09639759') !important;
+          background-size: contain !important;
+          background-repeat: no-repeat !important;
+          background-position: center !important;
+          border: none !important;
+        }
+      }
+    }
+
+    // Shout it
+    .shout-it {
+      height: 24px;
+      margin-top: 38px;
+      font-size: 16px;
+      font-weight: 300;
+      letter-spacing: 0;
+      line-height: 24px;
+      font-family: $language;
+
+      .ant-card-meta-description {
+        color: rgba(0, 0, 0, 1);
+      }
+    }
+
+    // 详细介绍
+    .description {
+      font-family: $language;
+      margin-top: 30px;
+      overflow: hidden;
+      transition: all 0.3s ease;
+
+      &:not(.expanded) {
+        height: 60px;
+
+        .text {
+          display: -webkit-box;
+          -webkit-box-orient: vertical;
+          -webkit-line-clamp: 3;
+          overflow: hidden;
+          text-overflow: ellipsis;
+        }
+      }
+
+      &.expanded {
+        height: auto;
+
+        .text {
+          display: block;
+          white-space: normal;
+        }
+      }
+
+      .ant-card-meta-description {
+        font-size: 12px;
+        font-weight: 300;
+        letter-spacing: 0;
+        line-height: 14px;
+        color: rgba(0, 0, 0, 1);
+        text-align: left;
+        vertical-align: top;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        gap: 4px;
+      }
+
+      .text {
+        width: 100%;
+        display: block;
+        line-height: 14px;
+      }
+
+      .more {
+        color: rgba(0, 0, 0, 1);
+        cursor: pointer;
+        font-weight: 500;
+        white-space: nowrap;
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
